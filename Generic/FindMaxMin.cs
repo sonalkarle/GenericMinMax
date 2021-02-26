@@ -1,10 +1,35 @@
-﻿using System;
+﻿using findMaxUsingGenerics;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Generic
+namespace FindMaxUsingGenerics
 {
-    class FindMaxMin
+    public class findMaximum
     {
+           /// <summary>
+           /// UC1:Find maximum term from integers
+           /// </summary>
+           /// <param name="firstNumber"></param>
+           /// <param name="secondNumber"></param>
+           /// <param name="thirdNumber"></param>
+           /// <returns></returns>
+            public int FindMaximumNumber(int firstNumber, int secondNumber, int thirdNumber)
+            {
+                if (firstNumber.CompareTo(secondNumber) > 0 && firstNumber.CompareTo(thirdNumber) > 0)
+                {
+                    return firstNumber;
+                }
+                else if (secondNumber.CompareTo(firstNumber) > 0 && secondNumber.CompareTo(thirdNumber) > 0)
+                {
+                    return secondNumber;
+                }
+                else if (thirdNumber.CompareTo(firstNumber) > 0 && thirdNumber.CompareTo(secondNumber) > 0)
+                {
+                    return thirdNumber;
+                }
+                throw new FindMaximumException("All Values are Same");
+            }
+        
     }
 }
