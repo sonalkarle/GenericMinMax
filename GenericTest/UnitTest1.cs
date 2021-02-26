@@ -45,25 +45,27 @@ namespace FindMaximumTest
         /// <param name="secondNumber"></param>
         /// <param name="thirdNumber"></param>
         [Test]
-        [TestCase(85.56f, 25.82f, 45.92f)]
-        [TestCase(98.21f, 16.58f, 78.15f)]
-        public void GivenFirstfloat(float firstNumber, float secondNumber, float thirdNumber)
+        [TestCase(97.13f, 23.15f, 23.15f)]
+        [TestCase(98.22f, 45.12f, 89.52f)]
+
+        public void GivenFirstNumFloatMaximum_ReturnMaximum(float num1, float num2, float num3)
         {
-            Assert.AreEqual(firstNumber, FindMaximum.FindMaximumNumber(firstNumber,secondNumber,thirdNumber));
+            Assert.AreEqual(num1, FindMaximum.FindMaximumfloatNumber(num1, num2, num3));
         }
+
         [Test]
-        [TestCase(85.5f, 95.8f, 45.9f)]
-        [TestCase(48.2f, 96.58f, 78.1f)]
-        public void Givensecondfloat(float firstNumber, float secondNumber, float thirdNumber)
+        [TestCase(35.26f, 98.58f, 12.13f)]
+        [TestCase(23.25f, 98.25f, 35.16f)]
+        public void GivenSecondNumFloatMaximum_ReturnMaximum(float num1, float num2, float num3)
         {
-            Assert.AreEqual(secondNumber, FindMaximum.FindMaximumNumber(firstNumber, secondNumber, thirdNumber));
+            Assert.AreEqual(num2, FindMaximum.FindMaximumfloatNumber(num1, num2, num3));
         }
+
         [Test]
-        [TestCase(85.5f, 25.8f, 95.9f)]
-        [TestCase(18.2f, 16.58f, 88.25f)]
-        public void GivenThirdfloat(float firstNumber, float secondNumber, float thirdNumber)
+        [TestCase(32.57f, 93.55f, 99.30f)]
+        [TestCase(12.25f, 15.23f, 88.12f)]
+        public void GivenThirdNumFloatMaximum_ReturnMaximum(float num1, float num2, float num3)
         {
-            Assert.AreEqual(thirdNumber, FindMaximum.FindMaximumNumber(firstNumber, secondNumber, thirdNumber));
+            Assert.AreEqual(num3, FindMaximum.FindMaximumfloatNumber(num1, num2, num3));
         }
     }
-}
