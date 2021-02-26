@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Generic
+namespace findMaxUsingGenerics
 {
-    class GenericException
+    class FindMaximumException : Exception
     {
+        public FindMaximumException(string message) : base(message)
+        {
+
+        }
     }
 }
