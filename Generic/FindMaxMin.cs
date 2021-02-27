@@ -1,10 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
-namespace Generic
+namespace TestMaximumNameSpace
 {
-    class FindMaxMin
+    public class TestMaximum<T> where T : IComparable
     {
+        //Intiaise the array
+
+        T[] InputArray;
+
+
+        public TestMaximum(T[] InputArray)
+        {
+            this.InputArray = InputArray;
+        }
+        //Sort the array
+        public T[] SortArray(T[] InputArray)
+        {
+            Array.Sort(InputArray);
+            return InputArray;
+        }
+        //get last value is max
+        public T GetMaximumValue()
+        {
+            T[] SortedInputArray = SortArray(InputArray);
+            return SortedInputArray.Last();
+        }
     }
 }
