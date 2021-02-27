@@ -14,7 +14,7 @@ namespace NUnitTestProject
         {
             TestMaximum<int> testMaximum = new TestMaximum<int>(new int[] { 86, 56, 12 });
             int result = testMaximum.GetMaximumValue();
-            Assert.AreEqual(76, result);
+            Assert.AreEqual(86, result);
         }
 
         [Test]
@@ -22,7 +22,7 @@ namespace NUnitTestProject
         {
             TestMaximum<int> testMaximum = new TestMaximum<int>(new int[] { 56, 86, 12 });
             int result = testMaximum.GetMaximumValue();
-            Assert.AreEqual(76, result);
+            Assert.AreEqual(86, result);
         }
 
         [Test]
@@ -30,7 +30,7 @@ namespace NUnitTestProject
         {
             TestMaximum<int> testMaximum = new TestMaximum<int>(new int[] { 56, 12, 86 });
             int result = testMaximum.GetMaximumValue();
-            Assert.AreEqual(76, result);
+            Assert.AreEqual(86, result);
         }
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace NUnitTestProject
         {
             TestMaximum<float> testMaximum = new TestMaximum<float>(new float[] { 86.9f, 46.2f, 12.8f });
             float result = testMaximum.GetMaximumValue();
-            Assert.AreEqual(76.1f, result);
+            Assert.AreEqual(86.9f, result);
         }
 
         [Test]
@@ -49,7 +49,7 @@ namespace NUnitTestProject
         {
             TestMaximum<float> testMaximum = new TestMaximum<float>(new float[] { 46.2f, 86.9f, 12.8f });
             float result = testMaximum.GetMaximumValue();
-            Assert.AreEqual(76.1f, result);
+            Assert.AreEqual(86.9f, result);
         }
 
         [Test]
@@ -57,7 +57,7 @@ namespace NUnitTestProject
         {
             TestMaximum<float> testMaximum = new TestMaximum<float>(new float[] { 46.2f, 12.8f, 86.9f });
             float result = testMaximum.GetMaximumValue();
-            Assert.AreEqual(76.1f, result);
+            Assert.AreEqual(86.9f, result);
         }
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace NUnitTestProject
         {
             TestMaximum<string> testMaximum = new TestMaximum<string>(new string[] { "Xerox", "abcd", "pqrs" });
             string result = testMaximum.GetMaximumValue();
-            Assert.AreEqual("Zebra", result);
+            Assert.AreEqual("Xerox", result);
         }
 
         [Test]
@@ -76,7 +76,7 @@ namespace NUnitTestProject
         {
             TestMaximum<string> testMaximum = new TestMaximum<string>(new string[] { "pqrs", "Xerox", "abcs" });
             string result = testMaximum.GetMaximumValue();
-            Assert.AreEqual("Zebra", result);
+            Assert.AreEqual("Xerox", result);
         }
 
         [Test]
@@ -84,7 +84,7 @@ namespace NUnitTestProject
         {
             TestMaximum<string> testMaximum = new TestMaximum<string>(new string[] { "abcd", "pqrs", "Xerox" });
             string result = testMaximum.GetMaximumValue();
-            Assert.AreEqual("Zebra", result);
+            Assert.AreEqual("Xerox", result);
         }
     }
 }
