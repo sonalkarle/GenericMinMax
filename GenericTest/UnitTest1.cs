@@ -4,7 +4,7 @@ namespace FindMaximumTest
 {
     public class Tests
     {
-        findMaximum FindMaximum;
+        FindMaximum FindMaximum;
         [SetUp]
         public void Setup()
         {

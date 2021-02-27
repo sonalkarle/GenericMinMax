@@ -1,30 +1,45 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
-namespace TestMaximumNameSpace
-{
-    public class TestMaximum<T> where T : IComparable
-    {
-        //Intiaise the array
+namespace FindMaxUsingGenerics
+{      
+    /// <summary>
+    /// UC5: Extend the program and print maximum value
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+   
 
-        T[] InputArray;
-
-
-        public TestMaximum(T[] InputArray)
+        public class TestMaximum<T> where T : IComparable
         {
-            this.InputArray = InputArray;
+           //Intialise the array
+            T[] InputArray;
+
+
+            public TestMaximum(T[] InputArray)
+            {
+                this.InputArray = InputArray;
+            }
+           //Sort the array
+            public T[] SortArray(T[] InputArray)
+            {
+                Array.Sort(InputArray);
+                return InputArray;
+            }
+            // Print maximum value
+            public void PrintMax(T[] SortedInputArray)
+            {
+                Console.WriteLine("Max Value: " + SortedInputArray.Last());
+            }
+            //Get maximum value
+            public T GetMaximumValue()
+            {
+                T[] SortedInputArray = SortArray(InputArray);
+                PrintMax(SortedInputArray);
+                return SortedInputArray.Last();
+            }
         }
-        //Sort the array
-        public T[] SortArray(T[] InputArray)
-        {
-            Array.Sort(InputArray);
-            return InputArray;
-        }
-        //get last value is max
-        public T GetMaximumValue()
-        {
-            T[] SortedInputArray = SortArray(InputArray);
-            return SortedInputArray.Last();
-        }
-    }
+
+    
 }

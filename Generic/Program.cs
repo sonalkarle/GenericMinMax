@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FindMaxUsingGenerics;
+using System;
 
 namespace Generic
 {
@@ -7,7 +8,7 @@ namespace Generic
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to max term");
-            
+           
         }
     }
 }
