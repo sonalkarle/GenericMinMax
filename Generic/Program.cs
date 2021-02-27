@@ -6,7 +6,7 @@ namespace Generic
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome max numberss");
+            Console.WriteLine("Welcome max number finding app");
         }
     }
 }
